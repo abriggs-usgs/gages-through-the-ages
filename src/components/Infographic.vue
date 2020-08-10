@@ -2,7 +2,7 @@
   <div id="component-infographic">
     <div class="grid-infographic-1">Each dot on the map above is a <em>streamgage</em></div>
     <div class="grid-infographic-2"> main gage graphic ...................................<br><br><br></div>
-    <div class="grid-infographic-3">first water line .....................................</div>
+    <div class="grid-infographic-3">first water line ...................................................................................</div>
     <div class="grid-infographic-4">That data is critical for water management</div>
     <div class="grid-infographic-5">The National Streamgaging program is funded by <em>Congress</em></div>
     <div class="grid-infographic-6">image of congress</div>
@@ -11,7 +11,7 @@
       operating streamgages fro the last 130 years.</div>
     <div class="grid-infographic-9">image small gage on post</div>
     <div class="grid-infographic-10">The story of streamgages tells the story of the evolving water needs of the the nation.</div>
-    <div class="grid-infographic-11">second water line</div>
+    <div class="grid-infographic-11">second water line .............................................................................</div>
     <div class="grid-infographic-12">image - larger gage.</div>
   </div>
 </template>
@@ -37,12 +37,14 @@ export default {
     grid-column: 2 / 3;
     grid-row: 2 / 5;
     justify-self: start;
+    z-index: 2;
   }
   .grid-infographic-3 {
     background-color: #0076d6;
     grid-column: 1 / 4;
     grid-row: 3;
     justify-self: start;
+    z-index: 1;
   }
   .grid-infographic-4 {
     background-color: #4AAE9B;
@@ -85,12 +87,14 @@ export default {
     grid-column: 2 / 3;
     grid-row: 11;
     justify-self: start;
+    z-index: 2;
   }
   .grid-infographic-11 {
     background-color: #4a60ae;
     grid-column: 1 / 4;
     grid-row: 11;
     justify-self: start;
+    z-index: 1;
   }
   .grid-infographic-12 {
     background-color: #54ae4a;
