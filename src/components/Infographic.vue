@@ -1,7 +1,7 @@
 <template>
   <div id="component-infographic">
-    <div class="grid-infographic-1">Each dot on the map above is a <em>streamgage</em></div>
-    <div class="grid-infographic-2"> main gage graphic ...................................<br><br><br></div>
+    <div class="grid-infographic-text-for-dots">Each dot on the map above is a <em>streamgage</em></div>
+    <div class="grid-infographic-2"><practiceSVG />main gage graphic ...................................<br><br><br></div>
     <div class="grid-infographic-3">first water line ...................................................................................</div>
     <div class="grid-infographic-4">That data is critical for water management</div>
     <div class="grid-infographic-5">The National Streamgaging program is funded by <em>Congress</em></div>
@@ -9,16 +9,20 @@
     <div class="grid-infographic-7">and over 1,400 state and local partner agencies.</div>
     <div class="grid-infographic-8">It's managed by the USGS, the U.S. Geological Survey, which has been
       operating streamgages fro the last 130 years.</div>
-    <div class="grid-infographic-9">image small gage on post</div>
+    <div class="grid-infographic-9"><practiceSVG />image small gage on post</div>
     <div class="grid-infographic-10">The story of streamgages tells the story of the evolving water needs of the the nation.</div>
     <div class="grid-infographic-11">second water line .............................................................................</div>
-    <div class="grid-infographic-12">image - larger gage.</div>
+    <div class="grid-infographic-12"><practiceSVG />image - larger gage.</div>
   </div>
 </template>
 
 <script>
+import practiceSVG from '@/assets/infographic/images/plant-sample-svgrepo-com.svg'
 export default {
-  name: 'Infographic'
+  name: 'Infographic',
+  components: {
+    practiceSVG
+  }
 }
 </script>
 
@@ -26,7 +30,7 @@ export default {
 #component-infographic {
   display: grid;
   grid-template-columns: 1fr 2fr 2fr 1fr;
-  .grid-infographic-1 {
+  .grid-infographic-text-for-dots {
     background-color: #97d4ea;
     grid-column: 2;
     grid-row: 1;
@@ -34,16 +38,16 @@ export default {
   }
   .grid-infographic-2 {
     background-color: #04c585;
-    grid-column: 2 / 3;
+    grid-column: 2 / 4;
     grid-row: 2 / 5;
     justify-self: start;
     z-index: 2;
   }
   .grid-infographic-3 {
     background-color: #0076d6;
-    grid-column: 1 / 4;
+    grid-column: 1 / 5;
     grid-row: 3;
-    justify-self: start;
+    justify-self: stretch;
     z-index: 1;
   }
   .grid-infographic-4 {
@@ -91,9 +95,9 @@ export default {
   }
   .grid-infographic-11 {
     background-color: #4a60ae;
-    grid-column: 1 / 4;
+    grid-column: 1 / 5;
     grid-row: 11;
-    justify-self: start;
+    justify-self: stretch;
     z-index: 1;
   }
   .grid-infographic-12 {
