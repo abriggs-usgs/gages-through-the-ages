@@ -2659,6 +2659,7 @@
     <caption id="svgcaption">
       {{ text.caption }}
     </caption>
+    <Infographic />
     <div>
       <p>{{ text.svgText }}</p>
     </div>
@@ -2689,9 +2690,12 @@
     import $ from 'jquery';
     import yearData from "../assets/data/year-data.js"
     import gagesBarChartAnimationText from "../assets/gagesBarChartAnimation/gagesBarChartAnimationText";
+    import Infographic from "@/components/Infographic";
+
     export default {
         name: 'GagesBarChartAnimation',
-        data() {
+      components: {Infographic},
+      data() {
             return {
                 monitoringLocationData: yearData.monitoringLocationData,
                 vizlab: this.vizlab || {},
